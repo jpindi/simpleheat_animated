@@ -3,40 +3,40 @@
 <head>
     <title>Heat Map Demonstration</title>
     <style>
-        body { text-align: center; font: 16px/1.4 "Helvetica Neue", Arial, sans-serif; }
+        body { font: 16px/1.4 "Helvetica Neue", Arial, sans-serif; }
         a { color: #0077ff; }
-        .container { z-index: 5; width: 800px; height: 500px; margin: 20px auto; position: relative; border: 1px solid #ccc; float:left; }
-        .options { position: absolute; top: 0; right: 0; padding: 10px; background: rgba(255,255,255,0.6);
+        .container { z-index: 5; width: 800px; height: 500px; margin-top: 20px auto; border: 1px solid #ccc; float:left; }
+        .options {  padding: 10px; margin-top: 20px; background: rgba(255,255,255,0.6);
             border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; line-height: 1; }
         .options input { width: 300px; }
-        .options label { width: 60px; float: left; text-align: left; margin-right: 10px; color: #555; }
+        .options label { width: 60px; float: left; text-align: left; float:left;margin-right: 10px; color: #555; }
         canvas {z-index: 10; color:white; margin:20px; overflow:visible;
       }
-        .panel {z-index: 5; position: relative; border: 1px solid #ccc; width: 250px; height:400px; padding: 10px;float:left; margin: 20px;}
-        .radios {text-align: left;}
+        .panel {z-index: 5; width: 750px; padding: 10px;position: static; margin-bottom: 20px;}
+        .radios {text-align: left; position: relative; float: left; padding-right: 40px;}
         .objects {z-index: 20; position: absolute; border: 1px solid #000000;}
     </style>
 </head>
 <body>
-  <div class="panel">
-    <h4>Animated Heat Map Demo</h4>
-    <label>Choose update</label>
-    <br/>
-    <div class="radios">
-        <input type="radio" id="updatedata" name="update" value="a" />
-        <label for="dewey">Update Data</label>
-    </div>
-    <div class="radios">
-      <input type="radio" id="agesegmentationadults" name="update" value="c" />
-      <label for="dewey">Age Segmentation (Adults)</label>
-    </div>
-    <div class="radios">
-      <input type="radio" id="agesegmentationkids" name="update" value="d" />
-      <label for="dewey">Age Segmentation (Young)</label>
-    </div>
+
+<div class="panel">
+  <label><strong>Animated Heat Map Demo - Choose update</strong></label>
+  <br/><br/>
+  <div class="radios">
+      <input type="radio" id="updatedata" name="update" value="a" />
+      <label for="dewey">Update data 1</label>
   </div>
-  <div class="container">
-      <canvas id="canvas1" width="750" height="450"></canvas>
+  <div class="radios">
+    <input type="radio" id="agesegmentationadults" name="update" value="c" />
+    <label for="dewey">Update data 2</label>
+  </div>
+  <div class="radios">
+    <input type="radio" id="agesegmentationkids" name="update" value="d" />
+    <label for="dewey">Update data 3</label>
+  </div>
+</div>
+<div class="container">
+    <canvas id="canvas1" width="750" height="450"></canvas>
 </div>
 <script src="jquery-3.4.1.min.js"></script>
 <script src="simpleheat.js"></script>
